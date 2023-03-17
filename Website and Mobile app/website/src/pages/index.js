@@ -1,17 +1,11 @@
-import Head from "next/head";
-import styles from "@/styles/Home.module.css";
-
-export default function Home() {
+export default function Dashboard() {
   return (
     <>
-      <Head>
-        <title>My I-Pond</title>
-        <meta name="description" content="Monitor the quality of water." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
-        <h1>HI how are you</h1>
+      <main className="text-center mx-auto">
+        <div className="h-screen font-mono">
+          <h1 className="font-bold">My I-Pond</h1>
+          <span>This is a project by MBC Laboratory.</span>
+        </div>
       </main>
     </>
   );
