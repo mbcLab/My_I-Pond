@@ -1,0 +1,23 @@
+#BERISI RAW DATA
+data_raw: /weather_station/src/dataweatherstation.csv
+#tipe_data
+datetime_cols : 
+- tanggal
+float_columns:
+- tekanan_udara
+int_cols: 
+- hujan
+- kelembabpan
+- temperature
+- tingkat_cahaya
+target : keterangan 
+predictors: 
+- hujan
+- kelembabpan 
+- tekanan_udara
+- temperature 
+- tingkat_cahaya
+
+#SEMUA TINGGAL DIGANTI DENGAN PARAMETER DARI AIR QUALITY
+#MODELS EMANG KOSONG TUNGGU NANTI PAS WAKTU BIKIN MODEL DI NOTEBOOKS ATAU MENGELOLA MACHINE LEARNINGNYA
+#DI SRC BAKAL ADA TEMPAT DIMANA BUAT DATA, CLEANSING, DAN DBS NYA
