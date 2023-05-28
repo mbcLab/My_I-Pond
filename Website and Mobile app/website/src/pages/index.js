@@ -1,3 +1,5 @@
+import Progress from "@/components/card/progress";
+
 export default function Dashboard() {
   return (
     <>
@@ -7,25 +9,20 @@ export default function Dashboard() {
           style={{ borderTop: "1px solid black" }}
         >
           <div className="title-text">
-            <h1>My I-Pond</h1>
+            <h1>Welcome</h1>
             <span>Automation water quality control.</span>
           </div>
         </div>
-
-        <div className="datas grid grid-cols-3 gap-3 text-center m-3 font-serif h-screen">
-          <div className="" style={{ border: "1px dashed black" }}>
-            <h1>pH Level</h1>
-          </div>
-
-          <div style={{ border: "1px dashed black" }}>
-            <h1>Kekeruhan</h1>
-          </div>
-
-          <div style={{ border: "1px dashed black" }}>
-            <h1>Suhu</h1>
-          </div>
-        </div>
       </main>
+
+      <div className="text-center m-10">
+        <h1 className="font-serif">Status</h1>
+        <div className="min-h-fit m-10 grid grid-cols-3 gap-3">
+          <Progress name="pH Status" percent="50" />
+          <Progress name="Turbidity Status" percent="50" />
+          <Progress name="Temperature Status" percent="50" />
+        </div>
+      </div>
     </>
   );
 }
