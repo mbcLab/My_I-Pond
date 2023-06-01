@@ -11,7 +11,7 @@ export default function Navigation() {
           <img src="./logo.png" alt="MBC Laboratory" className="max-h-12" />
         </a>
       </div>
-      <div className="col-span-2 font-mono">
+      <div className="col-span-2 font-mono min-h-fit">
         <h1>My I-Pond</h1>
       </div>
       <div className="flex justify-center items-center">
