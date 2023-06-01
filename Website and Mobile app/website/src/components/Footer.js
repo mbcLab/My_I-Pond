@@ -13,7 +13,7 @@ export default function Footer() {
           <h3>About</h3>
         </a>
         <a href="/docs" style={{ textDecoration: "none", color: "inherit" }}>
-          <h3>Documentasion</h3>
+          <h3>Documentation</h3>
         </a>
       </div>
     </div>
