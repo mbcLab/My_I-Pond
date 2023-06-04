@@ -1,5 +1,6 @@
 import Head from "next/head";
 import "@/styles/globals.css";
+import "@/styles/progress.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SSRProvider } from "react-bootstrap";
 import Navigation from "../components/Navbar";
