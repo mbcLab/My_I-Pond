@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Image from "next/image";
-import logo from "../../public/logo_lab_putih.png";
+import logo from "../../public/images/ipond_logo.svg";
+import logo_mbc from "../../public/images/mbc_logo.svg";
 
 export const metadata = {
   title: "My I-Pond",
@@ -17,13 +18,9 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body>
           <nav className="grid grid-cols-2 gap-5 justify-center text-center navbar text-white font-mono min-h-10">
-            <div className="items-center m-3 ml-10 col-start-1">
+            <div className="col-start-1 h-32 ml-10 max-w-fit">
               <a href="/">
-                <Image
-                  src={logo}
-                  alt="MBC Laboratory"
-                  style={{ width: "30%", height: "auto" }}
-                />
+                <Image src={logo} alt="My Ipond" className="mt-3" />
               </a>
             </div>
 
@@ -58,17 +55,17 @@ export default function RootLayout({ children }) {
           {children}
 
           <footer
-            className="h-64 grid grid-cols-2 items-center"
+            className="h-64 grid grid-cols-2 gap-10 items-center"
             style={{ background: "#011422" }}
           >
-            <div className="col-start-1 m-auto">
+            <div className="col-start-1 ml-10">
               <a href="https://www.instagram.com/mbclab/" target="_blank">
-                <Image src={logo} alt="MBC Laboratory" />
+                <Image src={logo_mbc} alt="MBC Laboratory" />
               </a>
             </div>
             <div className="col-span-1 text-white grid grid-cols-3">
               <div className="col-span-1">
-                <h1 style={{ cursor: "default" }}>About</h1>
+                {/* <h1 style={{ cursor: "default" }}>About</h1> */}
                 <a
                   href="/about"
                   style={{ textDecoration: "none", color: "inherit" }}
@@ -89,7 +86,7 @@ export default function RootLayout({ children }) {
                 </a>
               </div>
               <div className="col-span-1">
-                <h1 style={{ cursor: "default" }}>Contact</h1>
+                {/* <h1 style={{ cursor: "default" }}>Contact</h1> */}
                 <a
                   href="https://www.instagram.com/mbclab/"
                   target="_blank"
@@ -101,7 +98,7 @@ export default function RootLayout({ children }) {
                 <p>Linkedin</p>
               </div>
               <div className="col-span-1">
-                <h1 style={{ cursor: "default" }}>Support</h1>
+                {/* <h1 style={{ cursor: "default" }}>Support</h1> */}
                 <p>FAQs</p>
                 <p>Support Center</p>
               </div>

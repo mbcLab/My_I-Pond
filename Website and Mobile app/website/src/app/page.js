@@ -61,17 +61,49 @@ export default function Dashboard() {
           </h1>
         </div>
         <div className="grid grid-cols-4 gap-10 mt-5 text-center font-semibold text-white m-10 items-center justify-center">
-          <div>
-            <Ph />
+          <div
+            className=""
+            style={{
+              borderRadius: "5px",
+              background:
+                "linear-gradient(180deg,rgba(1, 20, 34, 1) 15%,rgba(25,64,83,255) 50%)",
+            }}
+          >
+            <Ph state="daily" />
+            <h1 className="pt-10 font-serif text-xl mb-10">pH</h1>
           </div>
-          <div>
-            <Temperature />
+          <div
+            className=""
+            style={{
+              borderRadius: "5px",
+              background:
+                "linear-gradient(180deg,rgba(1, 20, 34, 1) 15%,rgba(25,64,83,255) 50%)",
+            }}
+          >
+            <Temperature state="daily" />
+            <h1 className="pt-10 font-serif text-xl mb-10">Temperature</h1>
           </div>
-          <div>
-            <Clarity />
+          <div
+            className=""
+            style={{
+              borderRadius: "5px",
+              background:
+                "linear-gradient(180deg,rgba(1, 20, 34, 1) 15%,rgba(25,64,83,255) 50%)",
+            }}
+          >
+            <Clarity state="daily" />
+            <h1 className="pt-10 font-serif text-xl mb-10">Clarity</h1>
           </div>
-          <div>
-            <Overall />
+          <div
+            className=""
+            style={{
+              borderRadius: "5px",
+              background:
+                "linear-gradient(180deg,rgba(1, 20, 34, 1) 15%,rgba(25,64,83,255) 50%)",
+            }}
+          >
+            <Overall data="9" />
+            <h1 className="pt-10 font-serif text-xl mb-10">Overall</h1>
           </div>
         </div>
       </div>
