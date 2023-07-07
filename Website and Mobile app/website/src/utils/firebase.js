@@ -20,8 +20,8 @@ function dataRef() {
     measurementId: process.env.NEXT_PUBLIC_MEASUREMENT,
   };
   const app = initializeApp(firebaseConfig);
-  const initDatabase = getDatabase();
-  return ref(initDatabase, "/Prototype/Ipone.json");
+  const initDatabase = getDatabase(app);
+  return ref(initDatabase, "/Prototype/Ipone");
 }
 
 export { dataRef };
