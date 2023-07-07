@@ -10,7 +10,7 @@ export default async function page() {
       <section className="grid grid-cols-2 h-screen items-center">
         <div>
           <div>
-            <PH data="daily" />
+            <PH state="daily" />
           </div>
         </div>
         <div className="mr-10">
