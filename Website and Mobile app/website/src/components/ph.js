@@ -1,23 +1,51 @@
-import style from "@/styles/progress.module.css";
+"use client";
 
-export default function ph() {
-  let phData = 7;
-  const progress = (phData / 14) * 100;
+import style from "@/styles/progress.module.css";
+import { dataRef } from "@/utils/firebase";
+import { limitToLast, onValue, query } from "firebase/database";
+import { useEffect, useState } from "react";
+
+export default function ph({ state }) {
+  const [data, setdata] = useState(0);
+
+  const handleDaily = async () => {
+    const ref = dataRef();
+    const quer = query(ref, limitToLast(1));
+    await onValue(quer, (snap) => {
+      const obj = Object.values(snap.val());
+      setdata(obj[0].ph);
+    });
+  };
+
+  const handleWeekly = async () => {
+    const ref = dataRef();
+    const quer = query(ref);
+  };
+
+  useEffect(() => {
+    switch (state) {
+      case "daily":
+        handleDaily();
+        break;
+
+      case "weekly":
+        break;
+
+      case "monthly":
+        break;
+
+      default:
+        break;
+    }
+  }, []);
+
+  const progress = (data / 14) * 100;
   return (
-    <div
-      className=""
-      style={{
-        borderRadius: "5px",
-        background:
-          "linear-gradient(180deg,rgba(1, 20, 34, 1) 15%,rgba(25,64,83,255) 50%)",
-      }}
-    >
-      <div className={style.container} style={{ marginTop: "30px" }}>
-        <div className={style.outer} style={{ "--progress": `${progress}%` }}>
-          <div className={style.value}>{phData}</div>
-        </div>
-        <h1 className="pt-0 font-serif text-xl mb-10">pH</h1>
+    <div className={style.container} style={{}}>
+      <div className={style.outer} style={{ "--progress": `${progress}%` }}>
+        <div className={style.value}>{data}</div>
       </div>
+      {/* <h1 className="pt-0 font-serif text-xl mb-10">pH</h1> */}
     </div>
   );
 }
